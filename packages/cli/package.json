@@ -2,12 +2,12 @@
   "name": "@pitgenerate/cli",
   "version": "1.0.0",
   "description": "CLI tool for pitgenerate",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs",
   "bin": {
-    "pitgenerate": "./dist/index.js"
+    "pitgenerate": "./dist/index.cjs"
   },
   "scripts": {
-    "start": "node dist/index.js start",
+    "start": "node dist/index.cjs start",
     "build": "webpack --mode production"
   },
   "dependencies": {

@@ -7,7 +7,7 @@ module.exports = {
     server: './src/server.js'
   },
   output: {
-    filename: '[name].js',
+    filename: '[name].cjs',
     path: path.resolve(__dirname, 'dist'),
     libraryTarget: 'commonjs2'
   },
@@ -17,6 +17,6 @@ module.exports = {
   })],
   mode: 'production',
   resolve: {
-    extensions: ['.js']
+    extensions: ['.js', '.cjs']
   }
 };

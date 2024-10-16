@@ -11,7 +11,7 @@ program
   .description('Start the application with an optional URL')
   .action((url) => {
     const serverEnv = { ...process.env, APP_URL: url || '' };
-    const server = spawn('node', [path.join(__dirname, 'server.js')], { 
+    const server = spawn('node', [path.join(__dirname, 'server.cjs')], { 
       stdio: 'inherit',
       env: serverEnv
     });

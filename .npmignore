@@ -1,0 +1,10 @@
+# 保留这个文件为空，或者明确指定不要忽略的文件
+!packages/cli/dist
+!packages/app/dist
+!packages/app/server.js
+node_modules
+.env
+*.log
+
+
+

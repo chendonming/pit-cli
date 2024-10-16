@@ -1,0 +1,30 @@
+{
+    "name": "pitgenerate",
+    "version": "1.0.9",
+    "private": false,
+    "description": "A CLI tool to generate and start a Vue application with a custom URL",
+    "keywords": ["cli", "vue", "generator"],
+    "author": "chendm",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/chendm/pitgenerate.git"
+    },
+    "scripts": {
+      "start": "node packages/cli/dist/index.js start",
+      "build": "pnpm --filter @pitgenerate/cli build && pnpm --filter @pitgenerate/app build",
+      "test": "pnpm run build && node packages/cli/dist/index.js start",
+      "prepublishOnly": "pnpm run build"
+    },
+    "bin": {
+      "pitgenerate": "./packages/cli/dist/index.js"
+    },
+    "files": [
+      "packages/cli/dist",
+      "packages/app/dist",
+      "packages/app/server.js"
+    ],
+    "workspaces": [
+      "packages/*"
+    ]
+}
